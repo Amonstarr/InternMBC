@@ -634,6 +634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1662721602}
   - component: {fileID: 1662721601}
+  - component: {fileID: 1662721605}
   - component: {fileID: 1662721600}
   - component: {fileID: 1662721599}
   - component: {fileID: 1662721598}
@@ -874,6 +875,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.150516, y: 32.2}
   m_EdgeRadius: 0
+--- !u!114 &1662721605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662721596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388e0db1470f45c4c9d29e48d24cf7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
 --- !u!1 &1712107792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,12 +1277,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 7361663692508730581, guid: b64ef58fac73ccc42a996cb0865a2d1a, type: 3}
-  - {fileID: 4261097716285539222, guid: 84c54be2ba567504299c31eb0f752133, type: 3}
+  - {fileID: 7361663692508730581, guid: b64ef58fac73ccc42a996cb0865a2d1a, type: 3}
   spawnPoints:
   - {fileID: 157747188}
   - {fileID: 493795677}
   - {fileID: 790243013}
-  numberOfEnemies: 4
+  numberOfEnemies: 6
   spawnDelay: 2
 --- !u!1 &1963097441
 GameObject:
