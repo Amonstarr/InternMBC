@@ -1,0 +1,448 @@
+fileFormatVersion: 2
+guid: 18969631daf10c44a90553ce458519f5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Werna_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 937
+        width: 259
+        height: 243
+      alignment: 9
+      pivot: {x: 0.4648309, y: 0.26103354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eceab00aeefcb054a970f393635371e3
+      internalID: 1505285004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_1
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 934
+        width: 253
+        height: 248
+      alignment: 9
+      pivot: {x: 0.4729976, y: 0.2566691}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63bbc398fc634a4db94726685d7241e
+      internalID: -869778003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_2
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 944
+        width: 252
+        height: 236
+      alignment: 9
+      pivot: {x: 0.4909636, y: 0.2539453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1fe2f6f79605a4b8a28c34a20a3d8a
+      internalID: -483356742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_3
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 931
+        width: 263
+        height: 245
+      alignment: 9
+      pivot: {x: 0.4920562, y: 0.25270846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112d9f9e4cec02b4bb6095bb075afad5
+      internalID: -543360106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_4
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 898
+        width: 261
+        height: 308
+      alignment: 9
+      pivot: {x: 0.5090145, y: 0.3357827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd37faf5dce6eb44ac4ff84b30894a6
+      internalID: -2119178405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_5
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 894
+        width: 261
+        height: 309
+      alignment: 9
+      pivot: {x: 0.50450724, y: 0.3439274}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c540b805afbcd9843875f5b6f21bf418
+      internalID: -225202538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_6
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 623
+        width: 268
+        height: 239
+      alignment: 9
+      pivot: {x: 0.48725465, y: 0.2617979}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd086a87cf441f4cabb388dd78a5db5
+      internalID: 1648496211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_7
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 628
+        width: 263
+        height: 245
+      alignment: 9
+      pivot: {x: 0.49567115, y: 0.2536895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5ed351caf8d3247a1cd498c6e3779d
+      internalID: -1453294531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_8
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 626
+        width: 263
+        height: 245
+      alignment: 9
+      pivot: {x: 0.49205616, y: 0.2527082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac8d7a4ad7474749b4cae3ef015d557
+      internalID: -2028141149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_9
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 548
+        width: 262
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5044896, y: 0.1867761}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b391e8d8b44e234c81bc113b6999922
+      internalID: -495329208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_10
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 564
+        width: 263
+        height: 245
+      alignment: 9
+      pivot: {x: 0.4910555, y: 0.26955017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ab3c0c2fead9f4da8caf764a4cc8e4
+      internalID: -819137378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 213
+        width: 291
+        height: 353
+      alignment: 9
+      pivot: {x: 0.4878737, y: 0.20010462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56f9804a163b72439deddbbf75e299c
+      internalID: -381048133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 235
+        width: 264
+        height: 248
+      alignment: 9
+      pivot: {x: 0.50000024, y: 0.2723374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52970f54b606f55408b0225a88856752
+      internalID: 1310257554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werna_13
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 239
+        width: 305
+        height: 245
+      alignment: 9
+      pivot: {x: 0.5077133, y: 0.2551469}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801e6a8131b84aa4bb95bcb4db21574c
+      internalID: 1846882697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Werna_0: 1505285004
+      Werna_1: -869778003
+      Werna_10: -819137378
+      Werna_11: -381048133
+      Werna_12: 1310257554
+      Werna_13: 1846882697
+      Werna_2: -483356742
+      Werna_3: -543360106
+      Werna_4: -2119178405
+      Werna_5: -225202538
+      Werna_6: 1648496211
+      Werna_7: -1453294531
+      Werna_8: -2028141149
+      Werna_9: -495329208
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

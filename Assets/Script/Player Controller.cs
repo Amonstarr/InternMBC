@@ -8,18 +8,22 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int slashDamage = 20; // Damage yang diberikan oleh slashing
     [SerializeField] private Transform slashHitbox; // Hitbox untuk slashing
     [SerializeField] private float slashRadius = 0.5f; // Radius hitbox untuk slashing
+    [SerializeField] private AudioClip slashSound; // Suara untuk slash
+    [SerializeField] private AudioClip shootSound; // Suara untuk shoot
 
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
+    private AudioSource audioSource; // AudioSource untuk memutar suara
 
     private void Awake() {
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRender = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>(); // Inisialisasi AudioSource
     }
 
     private void OnEnable() {
@@ -33,13 +37,15 @@ public class PlayerController : MonoBehaviour
     }
 
     void Attack() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0)) { // Slash attack
             myAnimator.SetBool("isSlashing", true);
+            PlaySound(slashSound); // Mainkan suara slash
             StartCoroutine(DelaySlash());
             SlashAttack(); // Panggil fungsi serangan slashing
         }
-        else if (Input.GetMouseButtonDown(1)) {
+        else if (Input.GetMouseButtonDown(1)) { // Shoot attack
             myAnimator.SetBool("isShooting", true);
+            PlaySound(shootSound); // Mainkan suara shoot
             StartCoroutine(DelayStrike());
         }
     }
@@ -56,13 +62,19 @@ public class PlayerController : MonoBehaviour
 
     // Fungsi untuk serangan slashing
     void SlashAttack() {
-        // Mencari semua collider dalam radius hitbox yang memiliki tag "Enemy"
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(slashHitbox.position, slashRadius);
 
         foreach (Collider2D enemy in hitEnemies) {
             if (enemy.CompareTag("Enemy")) {
-                enemy.GetComponent<Enemy>().TakeDamage(slashDamage); // Memberikan damage pada musuh
+                enemy.GetComponent<Enemy>().TakeDamage(slashDamage); // Berikan damage
             }
+        }
+    }
+
+    // Fungsi untuk memainkan suara
+    private void PlaySound(AudioClip clip) {
+        if (clip != null) {
+            audioSource.PlayOneShot(clip); // Memainkan suara sekali
         }
     }
 

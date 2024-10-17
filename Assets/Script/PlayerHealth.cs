@@ -4,46 +4,60 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 100; // Kesehatan maksimal
-    private int currentHealth;
-    private Animator animator;
+    public int maxHealth = 100;
+    public int currentHealth;
+    public float invincibleTime = 2f; // Durasi invincible setelah terkena damage
+    private bool isInvincible = false;
+    public GameOverManager gameOverManager;
 
-    private void Start()
+    private SpriteRenderer spriteRenderer; // Referensi ke SpriteRenderer
+    public Transform spawnPoint; // Referensi ke Spawn Point
+
+    void Start()
     {
-        currentHealth = maxHealth; // Set kesehatan awal
-        animator = GetComponent<Animator>(); // Ambil komponen Animator
+        currentHealth = maxHealth;
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Ambil komponen SpriteRenderer
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage; // Kurangi kesehatan
+        if (isInvincible) return; // Jika player dalam keadaan invincible, tidak menerima damage
 
-        // Cek jika player terluka
+        currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            currentHealth = 0;
-            Die(); // Panggil fungsi mati
+            gameOverManager.ActivateGameOver(); // Panggil Game Over
         }
-        else
+
+        // Mulai invincibility dan flicker effect
+        StartCoroutine(InvincibilityAndFlicker());
+    }
+
+    IEnumerator InvincibilityAndFlicker()
+    {
+        isInvincible = true;
+
+        // Buat player berkedip selama beberapa detik
+        for (float i = 0; i < invincibleTime; i += 0.2f)
         {
-            Hurt(); // Panggil fungsi terluka
+            // Mengganti alpha sprite renderer untuk membuat efek blink
+            spriteRenderer.enabled = false; // Matikan sprite renderer untuk membuatnya hilang
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.enabled = true; // Nyalakan kembali sprite
+            yield return new WaitForSeconds(0.1f);
         }
-    }
 
-    private void Hurt()
-    {
-        animator.SetTrigger("IsHurt"); // Trigger animasi terluka
-    }
-
-    private void Die()
-    {
-        animator.SetBool("IsDead", true); // Trigger animasi mati
-        // Disable player movement atau lakukan hal lain yang diperlukan
-        this.enabled = false; // Nonaktifkan skrip ini
+        isInvincible = false; // Invincibility selesai
     }
 
     public int GetCurrentHealth()
     {
-        return currentHealth; // Mengembalikan kesehatan saat ini
+        return currentHealth;
+    }
+
+     public void ResetHealthAndPosition()
+    {
+        currentHealth = maxHealth; // Reset health ke maksimal
+        transform.position = spawnPoint.position; // Reset posisi player ke spawn point
     }
 }

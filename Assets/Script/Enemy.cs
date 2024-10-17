@@ -2,28 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Enemy : MonoBehaviour
 {
-    public int health = 100; // Health dari musuh
+    public int health = 50;
+    public LevelManager levelManager;
 
-    // Fungsi untuk menerima damage dari Fireball
+    void Start()
+    {
+        // Cari GameManager di scene dan buat referensi
+        levelManager = FindObjectOfType<LevelManager>(); // Cari LevelManager di scene
+    }
+
     public void TakeDamage(int damage)
     {
-        health -= damage; // Kurangi health musuh berdasarkan damage
-        Debug.Log("Enemy took damage: " + damage);
+        health -= damage;
 
-        // Jika health musuh mencapai 0, hancurkan objek musuh
         if (health <= 0)
         {
             Die();
         }
     }
 
-    // Fungsi untuk menghancurkan enemy jika health habis
     void Die()
     {
-        Debug.Log("Enemy died.");
-        Destroy(gameObject); // Hancurkan objek musuh dari scene
+        levelManager.EnemyDefeated(); // Beritahu LevelManager musuh telah kalah
+
+        // Hancurkan objek musuh
+        Destroy(gameObject);
     }
 }

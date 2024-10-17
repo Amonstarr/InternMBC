@@ -7,6 +7,11 @@ public class Fireball : MonoBehaviour
     public GameObject fireballPrefab; // Drag Fireball prefab into this field in the Inspector
     public float fireballSpeed = 20f; // Speed of the Fireball
     public Transform firePoint; // Point where fireball spawns (can be set to the player's hand, for example)
+    private Animator myAnimator;
+
+    void Start() {
+        myAnimator = GetComponent<Animator>();
+    }
 
     void Update()
     {

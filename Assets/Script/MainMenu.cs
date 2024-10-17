@@ -1,15 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame() {
-        SceneManager.LoadSceneAsync(2);
+    // Fungsi untuk tombol Play Game
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("CutScene1");
     }
 
-    public void Options() {
-        SceneManager.LoadSceneAsync(1);
+    // Fungsi untuk tombol Options
+    public void OpenOptions()
+    {
+        SceneManager.LoadScene("Options");
+    }
+
+    // Fungsi untuk tombol Keluar
+    public void QuitGame()
+    {
+        Debug.Log("Keluar dari game.");
+        Application.Quit(); 
     }
 }
