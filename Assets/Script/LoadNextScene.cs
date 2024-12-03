@@ -8,7 +8,7 @@ public class LoadNextScene : MonoBehaviour
 {
     public void LoadNextScen(string sceneName)
     {
-        SceneManager.LoadScene(sceneName); // Pindah ke scene berikutnya
+        SceneManager.LoadScene(sceneName); 
     }
 }
 

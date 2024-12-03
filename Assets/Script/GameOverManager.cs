@@ -3,22 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
-    public GameObject gameOverCanvas; // Referensi ke Game Over UI
-    public PlayerHealth playerHealth; // Referensi ke komponen PlayerHealth
-    private static GameOverManager instance; // Singleton instance
+    public GameObject gameOverCanvas; 
+    public PlayerHealth playerHealth; 
+    private static GameOverManager instance; 
 
 
     private void Start()
     {
-        gameOverCanvas.SetActive(false); // Pastikan UI game over tidak aktif di awal
+        gameOverCanvas.SetActive(false); 
     }
 
     public void ActivateGameOver()
     {
         if (gameOverCanvas != null)
         {
-            gameOverCanvas.SetActive(true); // Aktifkan Game Over UI
-            Time.timeScale = 0f; // Hentikan waktu
+            gameOverCanvas.SetActive(true); 
+            Time.timeScale = 0f; 
         }
         else
         {
@@ -29,15 +29,15 @@ public class GameOverManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Time.timeScale = 1f; // Jalankan kembali waktu
-        playerHealth.ResetHealthAndPosition(); // Reset health dan posisi player
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Restart level saat ini
+        Time.timeScale = 1f; 
+        playerHealth.ResetHealthAndPosition(); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
 
 
     public void QuitToMainMenu()
     {
-        Time.timeScale = 1f; // Jalankan waktu normal
-        SceneManager.LoadScene("Main Menu"); // Pindah ke Main Menu
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene("Main Menu"); 
     }
 }

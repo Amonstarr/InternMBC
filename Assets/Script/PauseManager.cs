@@ -3,10 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    public GameObject pauseMenuPanel;  // Panel pause menu
-    private bool isPaused = false;     // Status pause
+    public GameObject pauseMenuPanel;
+    private bool isPaused = false;
 
-    // Fungsi untuk memanggil pause
     public void TogglePause()
     {
         if (isPaused)
@@ -21,21 +20,21 @@ public class PauseManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        pauseMenuPanel.SetActive(false);  // Nonaktifkan pause menu
-        Time.timeScale = 1f;              // Jalankan waktu kembali
+        pauseMenuPanel.SetActive(false);  
+        Time.timeScale = 1f;              
         isPaused = false;
     }
 
     public void PauseGame()
     {
-        pauseMenuPanel.SetActive(true);  // Aktifkan pause menu
-        Time.timeScale = 0f;             // Hentikan waktu
+        pauseMenuPanel.SetActive(true);  
+        Time.timeScale = 0f;             
         isPaused = true;
     }
 
     public void QuitGame()
     {
         Debug.Log("Keluar dari game!");
-        SceneManager.LoadScene("Main Menu");  // Ganti ke scene MainMenu
+        SceneManager.LoadScene("Main Menu");  
     }
 }

@@ -5,12 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 50;
-    public LevelManager levelManager;
+    private LevelManager levelManager;
+    private MissionManager missionManager;
 
     void Start()
     {
-        // Cari GameManager di scene dan buat referensi
-        levelManager = FindObjectOfType<LevelManager>(); // Cari LevelManager di scene
+        levelManager = FindAnyObjectByType<LevelManager>(); 
+        missionManager = FindObjectOfType<MissionManager>();
     }
 
     public void TakeDamage(int damage)
@@ -25,9 +26,14 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        levelManager.EnemyDefeated(); // Beritahu LevelManager musuh telah kalah
+        levelManager.EnemyDefeated(); 
 
-        // Hancurkan objek musuh
+        if (missionManager != null)
+        {
+            missionManager.EnemyDefeated(); // Panggil fungsi di MissionManager
+        }
+
+
         Destroy(gameObject);
     }
 }

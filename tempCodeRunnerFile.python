@@ -1,9 +1,24 @@
-for i in range(1, 31):
-    if i % 3 == 0 and i % 5 == 0:
-        print("FizzBuzz")
-    elif i % 3 == 0:
-        print("Fizz")
-    elif i % 5 == 0:
-        print("Buzz")
+def hitung_biaya_taksi(jarak_km):
+    tarif_dasar = 10000  
+    tarif_per_140m = 5000  
+    jarak_meter = jarak_km * 1000  
+    
+    if jarak_meter <= 140:
+        return tarif_dasar
     else:
-        print(i)
+        jarak_lebih = jarak_meter - 140
+        biaya_tambahan = (jarak_lebih // 140) * tarif_per_140m
+        total_biaya = tarif_dasar + biaya_tambahan
+        return total_biaya
+
+biaya1 = hitung_biaya_taksi(2)
+print("Jarak perjalanan (km) 2")
+print("Total biaya yang harus dikeluarkan:", biaya1)
+
+biaya2 = hitung_biaya_taksi(0.28)
+print("\nJarak perjalanan (km) 0.28")
+print("Total biaya yang harus dikeluarkan:", biaya2)
+
+biaya3 = hitung_biaya_taksi(0.12)
+print("\nJarak perjalanan (km) 0.12")
+print("Total biaya yang harus dikeluarkan:", biaya3)
